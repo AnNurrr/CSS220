@@ -1,22 +1,17 @@
-from turtle import *
-
 # Ainur
 # 3/12/24
-# CSS 220 Fractal tree Example ( T-tree)
-# rearient the trunk of the tree to vertical
+# CSS 220 Module 9
 
-rt(-90)
-# branching angle for the base
-angle = 30
+#Factorial Recursion Example
 
+# 5! 5*4*3*2*1
 
-# function for the Y-tree
-# size = length of first line, depth = number of iterations
-def yTree(size, depth):
-    if depth >0:
-        #draw the base ( a vertical line)
-        fd(size)
-        rt(angle)
+def factRecursion(n):
+    # Base case: 1! =1
+    if n==1:
+        return 1
+    # Recursive case: n! = n*(n-1)!
+    else:
+        return n*factRecursion(n-1)
 
-yTree(100, 10)
-Screen().exitonclick()
+print(factRecursion(5))
